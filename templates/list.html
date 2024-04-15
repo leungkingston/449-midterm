@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Directory</title>
+    <style>
+    th, td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    {% if success_message %}
+    <div class="alert alert-success" role="alert">
+        {{ success_message }}
+    </div>
+    {% endif %}
+    <h1>Staff Directory</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in staff %}
+            <tr>
+                <td>{{ member[0] }}</td> <!-- Assuming the ID is the first column -->
+                <td>{{ member[1] }}</td> <!-- Assuming the name is the second column -->
+                <td>{{ member[2] }}</td> <!-- Assuming the email is the third column -->
+                <td>{{ member[3] }}</td> <!-- Assuming the role is the fourth column -->
+                <td>{{ member[4] }}</td> <!-- Assuming the role is the fourth column -->
+                <td>{{ member[5] }}</td> <!-- Assuming the role is the fourth column -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

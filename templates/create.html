@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Creation</title>
+    <style>
+        .tab {
+            display: inline-block;
+            margin-left: 2em;
+        }
+        form  { display: table;      }
+        p     { display: table-row;  }
+        label { display: table-cell; }
+        input { display: table-cell; }
+    </style>
+</head>
+<body>
+    <h1>
+        Add a new staff member
+    </h1>
+
+    <form action="/staff/create" method="POST">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+        </p>
+        <p>
+            <label for="pos">Position:</label>
+            <input type="text" id="pos" name="pos"><br>
+        </p>
+        <p>
+            <label for="num">Phone:</label>
+            <input type="text" id="num" name="num"><br>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br>
+        </p>
+        <p>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br>
+        </p>
+        <br>
+        <input type="submit" value="Add">
+    </form>
+
+
+</body>
+</html>
